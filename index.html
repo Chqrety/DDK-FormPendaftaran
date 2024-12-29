@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Pendaftaran</title>
+        <!-- css -->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <!-- javascript -->
+        <link rel="stylesheet" href="script.js" type="text/javascript" />
+
+        <!-- Poppins Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header-title">
+                <h1>Formulir</h1>
+                <div class="header-title-sub">
+                    <p>Pendaftaran</p>
+                    <p>Siswa Baru</p>
+                </div>
+            </div>
+            <div class="header-side">
+                <div class="header-logo">
+                    <img src="assets/logo.png" alt="Logo" />
+                    <p>SMP Raden Tanjung</p>
+                </div>
+                <div>
+                    <p class="address">
+                        JI. Cengkareng Tenggara 79, Metro, Lampung 31524
+                    </p>
+                    <p class="address">
+                        T: 0123456789 E: halo@situssupercanggih.co.id
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <form action="#" method="post">
+                <section>
+                    <p class="title-section">DATA DIRI SISWA</p>
+                    <div class="form-group">
+                        <div class="form-field">
+                            <p>Nama Lengkap</p>
+                            <input
+                                type="text"
+                                name="nama"
+                                id="nama"
+                                required
+                                pattern="^[a-zA-Z\s]+$"
+                                title="Input hanya boleh berisi huruf dan spasi"
+                            />
+                        </div>
+                        <div class="form-field">
+                            <p>Nomor Induk Asal</p>
+                            <input
+                                type="number"
+                                name="nik"
+                                id="nik"
+                                minlength="16"
+                                maxlength="16"
+                                required
+                                pattern="^\d{16}$"
+                                title="NIK harus terdiri dari 16 digit angka"
+                            />
+                        </div>
+                        <div class="form-field">
+                            <p>NISN</p>
+                            <input
+                                type="number"
+                                name="nisn"
+                                id="nisn"
+                                minlength="10"
+                                maxlength="10"
+                                required
+                                pattern="^\d{10}$"
+                                title="NISN harus terdiri dari 10 digit angka"
+                            />
+                        </div>
+                        <div class="form-field-ttl">
+                            <div>
+                                <p>Tempat Lahir</p>
+                                <div class="form-tempat-lahir">
+                                    <select name="provinsi" id="provinsi">
+                                        <option value="">Pilih Provinsi</option>
+                                    </select>
+                                    <select name="kota" id="kota">
+                                        <option value="">Pilih Kota</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Tanggal Lahir</p>
+                                <input
+                                    type="date"
+                                    id="tanggalLahir"
+                                    name="tanggalLahir"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <p>Jenis Kelamin</p>
+                            <div class="form-radio">
+                                <div class="radio">
+                                    <p>Laki-laki</p>
+                                    <input
+                                        type="radio"
+                                        name="jenis_kelamin"
+                                        id="jenis_kelamin"
+                                        value="Laki-laki"
+                                    />
+                                </div>
+                                <div class="radio">
+                                    <p>Perempuan</p>
+                                    <input
+                                        type="radio"
+                                        name="jenis_kelamin"
+                                        id="jenis_kelamin"
+                                        value="Perempuan"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <p>Agama</p>
+                            <select name="provinsi" id="provinsi">
+                                <option value="">Pilih Agama</option>
+                                <option value="islam">Islam</option>
+                                <option value="khatolik">Khatolik</option>
+                                <option value="protestan">Protestan</option>
+                                <option value="hindu">Hindu</option>
+                                <option value="buddha">Buddha</option>
+                                <option value="konghucu">Konghucu</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <p>Anak Ke</p>
+                            <input type="number" name="anakKe" id="anakKe" />
+                        </div>
+                        <div class="form-field-radio">
+                            <p>Status anak dalam keluarga</p>
+                            <div class="form-radio">
+                                <div class="radio">
+                                    <p>Anak Kandung</p>
+                                    <input
+                                        type="radio"
+                                        name="jenis_anak"
+                                        id="jenis_anak"
+                                        value="Laki-laki"
+                                    />
+                                </div>
+                                <div class="radio">
+                                    <p>Anak Angkat</p>
+                                    <input
+                                        type="radio"
+                                        name="jenis_anak"
+                                        id="jenis_anak"
+                                        value="Perempuan"
+                                    />
+                                </div>
+                                <div class="radio">
+                                    <p>Lainnya</p>
+                                    <input
+                                        type="radio"
+                                        name="jenis_anak"
+                                        id="jenis_anak"
+                                        value="Perempuan"
+                                    />
+                                    <input class="radio-input" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <p>Alamat Siswa</p>
+                            <input type="text" name="alamat" id="alamat" />
+                        </div>
+                        <div class="form-field">
+                            <p>No. Telepon Siswa</p>
+                            <input
+                                type="number"
+                                name="no_telp siswa"
+                                id="no_telp siswa"
+                            />
+                        </div>
+                        <div class="form-field">
+                            <p>Sekolah Asal</p>
+                            <input
+                                type="text"
+                                name="sekolah_asal"
+                                id="sekolah_asal"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p class="title-section">DATA ORANG TUA KANDUNG</p>
+                    <div class="form-group">
+                        <div class="form-field">
+                            <p>Nama Lengkap Ayah</p>
+                            <input
+                                type="text"
+                                name="nama_ayah"
+                                id="nama_ayah"
+                                required
+                                pattern="^[a-zA-Z\s]+$"
+                                title="Input hanya boleh berisi huruf dan spasi"
+                            />
+                        </div>
+                        <div class="form-field">
+                            <p>Nama Lengkap Ibu</p>
+                            <input
+                                type="text"
+                                name="nama_ibu"
+                                id="nama_ibu"
+                                required
+                                pattern="^[a-zA-Z\s]+$"
+                                title="Input hanya boleh berisi huruf dan spasi"
+                            />
+                        </div>
+                        <div class="form-field">
+                            <p>Alamat</p>
+                            <input type="text" name="alamat" id="alamat" />
+                        </div>
+                        <div class="form-field">
+                            <p>No. Telepon</p>
+                            <input type="number" name="no_telp" id="no_telp" />
+                        </div>
+                        <div class="form-ortu-group">
+                            <div class="id-left">
+                                <div class="form-field">
+                                    <p>Pekerjaan Ayah</p>
+                                    <input
+                                        type="text"
+                                        name="pekerjaan_ayah"
+                                        id="pekerjaan_ayah"
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <p>Pendidikan Terakhir Ayah</p>
+                                    <input
+                                        type="text"
+                                        name="pendidikan_ayah"
+                                        id="pendidikan_ayah"
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <p>Penghasilan Ayah /bulan</p>
+                                    <input
+                                        type="text"
+                                        name="penghasilan_ayah"
+                                        id="penghasilan_ayah"
+                                    />
+                                </div>
+                            </div>
+                            <div class="id-right">
+                                <div class="form-field">
+                                    <p>Pekerjaan Ibu</p>
+                                    <input
+                                        type="text"
+                                        name="pekerjaan_ibu"
+                                        id="pekerjaan_ibu"
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <p>Pendidikan Terakhir Ibu</p>
+                                    <input
+                                        type="text"
+                                        name="pendidikan_ibu"
+                                        id="pendidikan_ibu"
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <p>Penghasilan Ibu /bulan</p>
+                                    <input
+                                        type="text"
+                                        name="penghasilan_ibu"
+                                        id="penghasilan_ibu"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <p class="title-section">DATA DIRI WALI</p>
+                    <div class="form-group">
+                        <div class="form-field">
+                            <p>Nama Lengkap</p>
+                            <input
+                                type="text"
+                                name="nama_wali"
+                                id="nama_wali"
+                                required
+                                pattern="^[a-zA-Z\s]+$"
+                                title="Input hanya boleh berisi huruf dan spasi"
+                            />
+                        </div>
+                        <div class="form-field">
+                            <p>Alamat</p>
+                            <input
+                                type="text"
+                                name="alamat_wali"
+                                id="alamat_wali"
+                            />
+                        </div>
+                        <div class="form-ortu-group">
+                            <div class="id-left">
+                                <div class="form-field">
+                                    <p>No. Telepon</p>
+                                    <input
+                                        type="number"
+                                        name="no_telp_wali"
+                                        id="no_telp_wali"
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <p>Pekerjaan</p>
+                                    <input
+                                        type="text"
+                                        name="pekerjaan_wali"
+                                        id="pekerjaan_wali"
+                                    />
+                                </div>
+                            </div>
+                            <div class="id-right">
+                                <div class="form-field">
+                                    <p>Pendidikan Terakhir</p>
+                                    <input
+                                        type="text"
+                                        name="pendidikan_wali"
+                                        id="pendidikan_wali"
+                                    />
+                                </div>
+                                <div class="form-field">
+                                    <p>Penghasilan /bulan</p>
+                                    <input
+                                        type="text"
+                                        name="penghasilan_wali"
+                                        id="penghasilan_wali"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="button-group">
+                            <button class="button-submit" type="reset">
+                                Reset
+                            </button>
+                            <button class="button-submit" type="submit">
+                                DAFTAR
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </main>
+        <footer>
+            <div class="footer-left">
+                <div class="footer-left-text">
+                    <p>Semarang,</p>
+                    <input
+                        class="input-date"
+                        type="date"
+                        id="tanggal_pengisian"
+                        name="tanggal_pengisian"
+                    />
+                </div>
+                <p>ORANG TUA / WALI SISWA</p>
+            </div>
+            <div class="footer-right"></div>
+        </footer>
+
+        <!-- javascript -->
+        <script src="script.js"></script>
+    </body>
+</html>
