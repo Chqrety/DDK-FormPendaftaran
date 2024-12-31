@@ -98,10 +98,35 @@ section {
     background-color: #12294b10;
     margin: 0rem 1rem 0rem 1rem;
     padding: 1rem 1rem 1rem 1rem;
-    display: flex;
     flex-direction: column;
+    display: flex;
     row-gap: 1rem;
     border-radius: 0rem 0rem 1.5rem 1.5rem;
+    position: relative;
+}
+
+.input-file {
+    display: none;
+}
+
+.input-file-place {
+    position: absolute;
+    width: 12rem;
+    height: 16rem;
+    background-color: white;
+    right: 5rem;
+    top: 1rem;
+    background-size: contain; /* Pastikan gambar sesuai area */
+    background-repeat: no-repeat; /* Jangan ulang gambar */
+    background-position: center; /* Posisikan gambar di tengah */
+    cursor: pointer;
+}
+
+.text-upload-file {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-field {

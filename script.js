@@ -46,3 +46,47 @@ document.getElementById("provinsi").addEventListener("change", function () {
 })
 
 document.addEventListener("DOMContentLoaded", fetchProvinces)
+
+function triggerFileInput() {
+    const fileInput = document.getElementById("fileInput")
+    fileInput.click()
+}
+
+function updateBackground() {
+    const fileInput = document.getElementById("fileInput")
+    const filePlaceholder = document.getElementById("filePlaceholder")
+    const textPlaceHolder = document.getElementById("textPlaceHolder")
+    const fileNameDisplay = document.getElementById("fileName")
+
+    if (fileInput.files && fileInput.files[0]) {
+        const file = fileInput.files[0]
+        const reader = new FileReader()
+
+        reader.onload = function (e) {
+            filePlaceholder.style.backgroundImage = `url(${e.target.result})`
+            textPlaceHolder.textContent = ""
+            fileNameDisplay.textContent = file.name
+        }
+
+        reader.readAsDataURL(file)
+    } else {
+        fileNameDisplay.textContent = "Tidak ada file dipilih"
+    }
+}
+
+function resetFileInput() {
+    // Reset input file
+    const fileInput = document.getElementById("fileInput")
+    const textPlaceHolder = document.getElementById("textPlaceHolder")
+    const fileNameDisplay = document.getElementById("fileName")
+
+    // Kosongkan input file
+    fileInput.value = ""
+
+    // Reset background image dan teks
+    filePlaceholder.style.backgroundImage = ""
+    textPlaceHolder.textContent = "Klik untuk upload"
+
+    // Reset nama file
+    fileNameDisplay.textContent = "Tidak ada file dipilih"
+}
